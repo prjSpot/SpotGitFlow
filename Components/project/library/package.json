@@ -1,0 +1,248 @@
+{
+  "name": "react-exo",
+  "version": "0.17.1",
+  "type": "module",
+  "types": "./gen/types/index.d.ts",
+  "scripts": {
+    "dev": "conc -c 'auto' 'pnpm:*:dev'",
+    "build": "conc -c 'auto' -g 'pnpm:*:build'",
+    "web:dev": "vite dev -c ../toolkit/bundler/gen/libs/exo.web.js --port 6606",
+    "web:build": "vite build -c ../toolkit/bundler/gen/libs/exo.web.js",
+    "native:dev": "vite dev -c ../toolkit/bundler/gen/libs/exo.native.js --port 6706",
+    "native:build": "vite build -c ../toolkit/bundler/gen/libs/exo.native.js",
+    "typedoc": "typedoc"
+  },
+  "exports": {
+    ".": {
+      "types": "./gen/types/index.d.ts",
+      "import": "./gen/web/index.js",
+      "require": "./gen/native/index.js"
+    },
+    "./redux": {
+      "types": "./gen/types/redux.d.ts",
+      "import": "./gen/web/redux.js",
+      "require": "./gen/native/redux.js"
+    },
+    "./device": {
+      "types": "./gen/types/device.d.ts",
+      "import": "./gen/web/device.js",
+      "require": "./gen/native/device.js"
+    },
+    "./navigation": {
+      "types": "./gen/types/navigation.d.ts",
+      "import": "./gen/web/navigation.js",
+      "require": "./gen/native/navigation.js"
+    },
+    "./fs": {
+      "types": "./gen/types/fs.d.ts",
+      "import": "./gen/web/fs.js",
+      "require": "./gen/native/fs.js"
+    },
+    "./storage": {
+      "types": "./gen/types/storage.d.ts",
+      "import": "./gen/web/storage.js",
+      "require": "./gen/native/storage.js"
+    },
+    "./form": {
+      "types": "./gen/types/form.d.ts",
+      "import": "./gen/web/form.js",
+      "require": "./gen/native/form.js"
+    },
+    "./toast": {
+      "types": "./gen/types/toast.d.ts",
+      "import": "./gen/web/toast.js",
+      "require": "./gen/native/toast.js"
+    },
+    "./gesture": {
+      "types": "./gen/types/gesture.d.ts",
+      "import": "./gen/web/gesture.js",
+      "require": "./gen/native/gesture.js"
+    },
+    "./skeleton": {
+      "types": "./gen/types/skeleton.d.ts",
+      "import": "./gen/web/skeleton.js",
+      "require": "./gen/native/skeleton.js"
+    },
+    "./motion": {
+      "types": "./gen/types/motion.d.ts",
+      "import": "./gen/web/motion.js",
+      "require": "./gen/native/motion.js"
+    },
+    "./icon": {
+      "types": "./gen/types/icon.d.ts",
+      "import": "./gen/web/icon.js",
+      "require": "./gen/native/icon.js"
+    },
+    "./image": {
+      "types": "./gen/types/image.d.ts",
+      "import": "./gen/web/image.js",
+      "require": "./gen/native/image.js"
+    },
+    "./video": {
+      "types": "./gen/types/video.d.ts",
+      "import": "./gen/web/video.js",
+      "require": "./gen/native/video.js"
+    },
+    "./lottie": {
+      "types": "./gen/types/lottie.d.ts",
+      "import": "./gen/web/lottie.js",
+      "require": "./gen/native/lottie.js"
+    },
+    "./rive": {
+      "types": "./gen/types/rive.d.ts",
+      "import": "./gen/web/rive.js",
+      "require": "./gen/native/rive.js"
+    },
+    "./markdown": {
+      "types": "./gen/types/markdown.d.ts",
+      "import": "./gen/web/markdown.js",
+      "require": "./gen/native/markdown.js"
+    },
+    "./checkbox": {
+      "types": "./gen/types/checkbox.d.ts",
+      "import": "./gen/web/checkbox.js",
+      "require": "./gen/native/checkbox.js"
+    },
+    "./switch": {
+      "types": "./gen/types/switch.d.ts",
+      "import": "./gen/web/switch.js",
+      "require": "./gen/native/switch.js"
+    },
+    "./radio": {
+      "types": "./gen/types/radio.d.ts",
+      "import": "./gen/web/radio.js",
+      "require": "./gen/native/radio.js"
+    },
+    "./slider": {
+      "types": "./gen/types/slider.d.ts",
+      "import": "./gen/web/slider.js",
+      "require": "./gen/native/slider.js"
+    },
+    "./picker": {
+      "types": "./gen/types/picker.d.ts",
+      "import": "./gen/web/picker.js",
+      "require": "./gen/native/picker.js"
+    },
+    "./progress": {
+      "types": "./gen/types/progress.d.ts",
+      "import": "./gen/web/progress.js",
+      "require": "./gen/native/progress.js"
+    },
+    "./calendar": {
+      "types": "./gen/types/calendar.d.ts",
+      "import": "./gen/web/calendar.js",
+      "require": "./gen/native/calendar.js"
+    },
+    "./utils": {
+      "types": "./gen/types/utils.d.ts",
+      "import": "./gen/web/utils.js",
+      "require": "./gen/native/utils.js"
+    },
+    "./checkbox.css": "./gen/web/checkbox.css",
+    "./radio.css": "./gen/web/radio.css",
+    "./slider.css": "./gen/web/slider.css",
+    "./switch.css": "./gen/web/switch.css",
+    "./babel-plugin-iconify-extract": {
+      "types": "./gen/types/babel-plugin-iconify-extract.d.ts",
+      "require": "./gen/native/babel-plugin-iconify-extract.cjs"
+    },
+    "./babel-plugin-iconify-transform": {
+      "types": "./gen/types/babel-plugin-iconify-transform.d.ts",
+      "require": "./gen/native/babel-plugin-iconify-transform.cjs"
+    }
+  },
+  "peerDependencies": {
+    "@candlefinance/faster-image": ">=1",
+    "@lingui/core": ">=4",
+    "@lingui/macro": ">=4",
+    "@lingui/react": ">=4",
+    "@marceloterreiro/flash-calendar": ">=0",
+    "@react-native-community/checkbox": ">=0.5",
+    "@react-native-community/netinfo": ">=11",
+    "@react-native-community/slider": ">=4",
+    "@react-native-picker/picker": ">=2",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "react-native": ">=74",
+    "react-native-gesture-handler": ">=2",
+    "react-native-get-random-values": ">=1",
+    "react-native-linear-gradient": ">=2",
+    "react-native-mmkv": ">=2",
+    "react-native-reanimated": ">=3",
+    "react-native-screens": ">=3",
+    "react-native-skottie": ">=2.1.1",
+    "react-native-svg": ">=15",
+    "react-native-video": ">=5"
+  },
+  "dependencies": {
+    "@humanfs/core": "^0.18.2",
+    "@humanfs/memory": "^0.19.2",
+    "@humanfs/web": "^0.13.3",
+    "@iconify/react": "^5.0.1",
+    "@iconify/json": "^2.2.227",
+    "@iconify/utils": "^2.1.25",
+    "@legendapp/motion": "^2.3.0",
+    "@lottiefiles/dotlottie-react": "^0.7.2",
+    "@radix-ui/react-checkbox": "^1.1.1",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-radio-group": "^1.2.0",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-slider": "^1.2.0",
+    "@radix-ui/react-switch": "^1.1.0",
+    "@reduxjs/toolkit": "^2.2.6",
+    "@rive-app/react-canvas": "^4.13.3",
+    "@shopify/flash-list": "^1.7.0",
+    "@vidstack/react": "^0.6.15",
+    "burnt": "^0.12.2",
+    "history": "^5.3.0",
+    "idb-keyval": "^6.2.1",
+    "react-content-loader": "^7.0.2",
+    "react-hook-form": "^7.52.1",
+    "react-native-markdown-display": "^7.0.2",
+    "react-redux": "^9.1.2",
+    "react-router": "^6.24.1",
+    "redux": "^5.0.1",
+    "redux-first-history": "^5.2.0",
+    "redux-persist": "^6.0.0",
+    "thumbhash": "^0.1.1",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.24.8",
+    "@candlefinance/faster-image": "^1.6.2",
+    "@lingui/core": "^4.11.2",
+    "@marceloterreiro/flash-calendar": "^1.0.0",
+    "@react-native-community/checkbox": "^0.5.17",
+    "@react-native-community/netinfo": "^11.3.2",
+    "@react-native-community/slider": "^4.5.2",
+    "@react-native-picker/picker": "^2.7.7",
+    "@storybook/react": "^8.2.2",
+    "@types/babel__core": "^7.20.5",
+    "@types/jest": "^29.5.12",
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "@types/react-native-video": "^5.0.20",
+    "bundler": "workspace:*",
+    "config": "workspace:*",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "^0.74.3",
+    "react-native-gesture-handler": "^2.17.1",
+    "react-native-get-random-values": "^1.11.0",
+    "react-native-linear-gradient": "^2.8.3",
+    "react-native-macos": "^0.73.33",
+    "react-native-mmkv": "^2.12.2",
+    "react-native-navigation": "7.40.1",
+    "react-native-reanimated": "^3.14.0",
+    "react-native-screens": "^3.32.0",
+    "react-native-skottie": "^2.1.4",
+    "react-native-svg": "^15.4.0",
+    "react-native-url-polyfill": "^2.0.0",
+    "react-native-video": "6.4.1",
+    "react-native-web": "^0.19.12",
+    "react-native-web-linear-gradient": "^1.1.2",
+    "react-native-windows": "^0.74.11",
+    "rive-react-native": "^7.3.0",
+    "typedoc": "^0.26.4"
+  }
+}
