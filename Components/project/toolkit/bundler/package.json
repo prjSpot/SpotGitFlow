@@ -1,0 +1,38 @@
+{
+  "name": "bundler",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc"
+  },
+  "bin": {
+    "vite": "./node_modules/vite/bin/vite.js"
+  },
+  "exports": {
+    "./web.client.cfg": "./gen/web/client.js",
+    "./web.docs.cfg": "./gen/web/docs.js",
+    "./lib.exo.web.cfg": "./gen/libs/exo.web.js",
+    "./lib.design.web.cfg": "./gen/libs/design.web.js"
+  },
+  "devDependencies": {
+    "@lingui/core": "^4.11.2",
+    "@lingui/vite-plugin": "^4.11.2",
+    "@rollup/plugin-dynamic-import-vars": "^2.1.2",
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "@vitejs/plugin-react": "^4.3.1",
+    "config": "workspace:*",
+    "lightningcss": "^1.25.1",
+    "million": "^3.1.11",
+    "react-native": "^0.74.3",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-node-polyfills": "^0.22.0",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vocs": "1.0.0-alpha.52",
+    "yaml": "latest"
+  }
+}

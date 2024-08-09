@@ -1,0 +1,34 @@
+{
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.folders.associations": {
+    "output": "dist",
+    "dev": "shared",
+    "bundler": "container",
+    "client": "mobile",
+    "guides": "content",
+    "native": "target",
+    "targets": "target",
+    "android-tv": "android",
+    "visionos": "macos",
+    "tvos": "macos",
+    "vocs": "vue",
+    "rive": "animation",
+  },
+  "material-icon-theme.files.associations": {
+    "app/layout.tsx": "renovate",
+    "app/provider.tsx": "dll",
+    "app/index.tsx": "tree",
+    "routes/index.tsx": "routing",
+    "routes/index.native.tsx": "routing",
+    "store.ts": "redux-reducer",
+    "store/app.ts": "redux-reducer",
+    "store/index.tsx": "redux-action",
+  },
+  "typescript.tsserver.watchOptions": {
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriorityPolling",
+    "watchFile": "useFsEventsOnParentDirectory",
+    "excludeDirectories": ["**/node_modules/**/*"],
+    "synchronousWatchDirectory": true,
+  }
+}
